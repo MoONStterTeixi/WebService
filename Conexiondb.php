@@ -2,7 +2,7 @@
 $Servidor = "localhost";
 $user = "root";
 $pass = "";
-$db = "ProectoFinal";
+$db = "test";
 
 $conexion = mysqli_connect($Servidor, $user, $pass, $db);
 if(mysqli_connect_errno()){
