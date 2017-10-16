@@ -1,18 +1,19 @@
 <?php
 
 //Link Callback
-//http://localhost/WebService/Consultas.php?format=xml
-//http://localhost/WebService/Consultas.php?format=json
+//http://localhost/WebService/Consultas.php?format=xml&code=1111&action=SelectDatos
+//http://localhost/WebService/Consultas.php?format=json&code=1111&action=SelectDatos
 
 
 $format = strtolower($_GET['format']) == 'json' ? 'json' : 'xml'; //Valor por defecto XML
 $code = $_GET['code'];
 $action = $_GET['action'];
 $Hcode = '1111'; //Codigo de seguridad
+
 if($code === $Hcode){
     switch ($action) {
         case 'SelectDatos':
-        SelectDatos();
+        SelectDatos($format);
             break;
         default:
             echo 'Error, accion no valida.';
@@ -21,15 +22,16 @@ if($code === $Hcode){
 }else{
     echo 'Error, codigo erroneo';
 }
-function SelectDatos(){
+function SelectDatos($format){
     require("Conexiondb.php");
     $query = "SELECT * FROM datos";
     mysqli_query($conexion, $query) or die(mysqli_error());
     $result = $conexion->query($query);
     mysqli_close($conexion);
-    format($result);
+    format($result,$format);
+    
 }
-function format($result){
+function format($result,$format){
     $posts = array();
     if(mysqli_num_rows($result)) {
         while($post = mysqli_fetch_assoc($result)) {
