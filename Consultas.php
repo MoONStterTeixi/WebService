@@ -4,7 +4,6 @@
 //http://localhost/WebService/Consultas.php?format=xml&code=1111&action=SelectDatos
 //http://localhost/WebService/Consultas.php?format=json&code=1111&action=SelectDatos
 
-
 $format = strtolower($_GET['format']) == 'json' ? 'json' : 'xml'; //Valor por defecto XML
 $code = $_GET['code'];
 $action = $_GET['action'];
@@ -22,6 +21,7 @@ if($code === $Hcode){
 }else{
     echo 'Error, codigo erroneo';
 }
+
 function SelectDatos($format){
     require("Conexiondb.php");
     $query = "SELECT * FROM datos";

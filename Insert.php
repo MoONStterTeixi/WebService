@@ -21,6 +21,7 @@ if($code === $Hcode){
 else{
     echo 'Error, codigo erroneo';
 }
+
 function InsertarDatos(){
     require("Conexiondb.php");
     $num1 = $_GET['num1'];
@@ -29,6 +30,4 @@ function InsertarDatos(){
     mysqli_query($conexion, $query) or die(mysqli_error());
     mysqli_close($conexion);
 }
-
-
 ?>
