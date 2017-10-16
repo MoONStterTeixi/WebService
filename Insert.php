@@ -26,7 +26,7 @@ function InsertarDatos(){
     require("Conexiondb.php");
     $num1 = $_GET['num1'];
     $num2 = $_GET['num2'];
-    $query = "INSERT INTO datos (num1, num2) VALUES ('$num1','$num2')";
+    $query = "INSERT INTO datos (nombre, Apellido) VALUES ('$num1','$num2')";
     mysqli_query($conexion, $query) or die(mysqli_error());
     mysqli_close($conexion);
 }

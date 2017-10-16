@@ -3,7 +3,7 @@ $Servidor = "localhost";
 $puerto = "3306";
 $user = "root";
 $pass = "";
-$db = "test";
+$db = "proectofinal";
 
 $Servidor = $Servidor . ":" . $puerto;
 
