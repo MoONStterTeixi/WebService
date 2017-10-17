@@ -1,0 +1,11 @@
+//https://futurestud.io/tutorials/gson-getting-started-with-java-json-serialization-deserialization
+
+{"posts":[
+    {"post":{"num1":"10","num2":"12"}},
+    {"post":{"num1":"10","num2":"12"}},
+    {"post":{"num1":"10","num2":"12"}},
+    {"post":{"num1":"100","num2":"100"}},
+    {"post":{"num1":"120","num2":"120"}},
+    {"post":{"num1":"1200","num2":"1200"}},
+    {"post":{"num1":"12000","num2":"12000"}}
+]}
