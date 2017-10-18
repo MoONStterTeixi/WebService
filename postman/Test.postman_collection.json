@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test",
+		"_postman_id": "47efead0-1090-acaa-7916-a7dd289f30c6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getall",
+			"request": {
+				"url": {
+					"raw": "{{host}}/Consultas.php?code=1111&action=getall",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"Consultas.php"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1111",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "action",
+							"value": "getall",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add row",
+			"request": {
+				"url": {
+					"raw": "{{host}}/Consultas.php?code=1111&action=insertarnums&num1=3&num2=1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"Consultas.php"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1111",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "action",
+							"value": "insertarnums",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "num1",
+							"value": "3",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "num2",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
