@@ -45,20 +45,14 @@
 			"name": "Add row",
 			"request": {
 				"url": {
-					"raw": "{{host}}/Insert.php?action=InsertarDatos&code=1111&num1=666&num2=666",
+					"raw": "{{host}}/Consultas.php?code=1111&action=insertarnums&num1=3&num2=1",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"Insert.php"
+						"Consultas.php"
 					],
 					"query": [
-						{
-							"key": "action",
-							"value": "InsertarDatos",
-							"equals": true,
-							"description": ""
-						},
 						{
 							"key": "code",
 							"value": "1111",
@@ -66,14 +60,20 @@
 							"description": ""
 						},
 						{
+							"key": "action",
+							"value": "insertarnums",
+							"equals": true,
+							"description": ""
+						},
+						{
 							"key": "num1",
-							"value": "666",
+							"value": "3",
 							"equals": true,
 							"description": ""
 						},
 						{
 							"key": "num2",
-							"value": "666",
+							"value": "1",
 							"equals": true,
 							"description": ""
 						}

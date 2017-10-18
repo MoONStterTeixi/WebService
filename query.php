@@ -10,7 +10,7 @@
     if($code === $Hcode){
         switch ($action) {
             case 'getall':
-                getall($format);
+                getall();
                 break;
             case 'insertarnums':
                 insertarnums();
@@ -23,7 +23,7 @@
         echo 'Error: Hcode fail';
     }
 
-    function getall($format){
+    function getall(){
         $conexion = new conexiondb();
         $query = "SELECT * FROM datos";
         $result = $conexion->query($query);

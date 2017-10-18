@@ -33,13 +33,11 @@
         }
 
         function desconectar(){
-            mysqli_close($this->conexion);
         }
 
         function query($query){
             $resultado = $this->conexion->query($query);
             return $resultado;
         }
-
     }
 ?>
