@@ -25,7 +25,7 @@
 
     function getall(){
         $conexion = new conexiondb();
-        $query = "SELECT * FROM datos";
+        $query = "SELECT * FROM datos WHERE num1 = 9";
         $result = $conexion->query($query);
         $conexion->desconectar();
         echo format($result);
