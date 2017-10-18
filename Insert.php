@@ -1,7 +1,6 @@
 <?php
 
-//Link Callback
-//http://localhost/WebService/Insert.php?action=InsertarDatos&code=1111&num1=100&num2=100
+include('conexiondb.class.php');
 
 $code = $_GET['code'];
 $action = $_GET['action'];
@@ -23,11 +22,11 @@ else{
 }
 
 function InsertarDatos(){
-    require("Conexiondb.php");
     $num1 = $_GET['num1'];
     $num2 = $_GET['num2'];
+    $conexion = new conexiondb();
     $query = "INSERT INTO datos (num1, num2) VALUES ('$num1','$num2')";
-    mysqli_query($conexion, $query) or die(mysqli_error());
-    mysqli_close($conexion);
+    $result = $conexion->query($query);
+    
 }
 ?>
